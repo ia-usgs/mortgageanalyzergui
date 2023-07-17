@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -13,18 +14,21 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../dark-wallpaper.jpg" />
+               </image></ImageView>
             <TextField fx:id="loanTextField" layoutX="36.0" layoutY="100.0" promptText="Enter Loan Amount" />
             <TextField fx:id="interestTextField" layoutX="36.0" layoutY="163.0" promptText="Enter Interest Rate" />
             <TextField fx:id="durationTextField" layoutX="36.0" layoutY="227.0" promptText="Enter Loan Duration" />
-            <Button fx:id="verificationButton" layoutX="203.0" layoutY="125.0" mnemonicParsing="false" text="Verification Check" onAction="#verificationButton"/>
-            <Label layoutX="224.0" layoutY="32.0" text="Mortgage Analyzer">
+            <Button fx:id="verificationButton" layoutX="203.0" layoutY="125.0" mnemonicParsing="false" onAction="#verificationButton" text="Verification Check" />
+            <Label layoutX="224.0" layoutY="32.0" text="Mortgage Analyzer" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <TextArea fx:id="textArea" layoutX="342.0" layoutY="100.0" prefHeight="278.0" prefWidth="243.0" />
-            <Button fx:id="analyzeButton" layoutX="203.0" layoutY="194.0" mnemonicParsing="false" text="Analyze Mortgage" onAction="#analyzeButton"/>
+            <Button fx:id="analyzeButton" layoutX="203.0" layoutY="194.0" mnemonicParsing="false" onAction="#analyzeButton" text="Analyze Mortgage" />
          </children>
       </Pane>
    </children>
