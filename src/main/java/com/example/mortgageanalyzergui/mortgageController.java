@@ -29,7 +29,7 @@ public class mortgageController {
     @FXML
     private void initialize() {
         mortgageAnalyzer = new mortgageanalyzer();
-        analyzeButton.setDisable(true); // Disable analyzeButton initially
+        analyzeButton.setDisable(true); // starts with the button off
     }
 
     @FXML
@@ -43,10 +43,10 @@ public class mortgageController {
         if (verified) {
             mortgageAnalyzer.setLoanDetails(loanAmount, loanTerm, interestRate);
             textArea.setText("Verification Complete");
-            analyzeButton.setDisable(false); // Enable analyzeButton after successful verification
+            analyzeButton.setDisable(false); //turns on the analyzebutton if it goes through
         } else {
             textArea.setText("Invalid Input, please try again");
-            analyzeButton.setDisable(true); // Disable analyzeButton if verification fails
+            analyzeButton.setDisable(true); // will turn off the analyzebutton if it doesw not go through
         }
     }
 
